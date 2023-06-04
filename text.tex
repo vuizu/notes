@@ -1,0 +1,89 @@
+%!TEX program = xelatex
+\documentclass{article}
+
+\usepackage{geometry}
+
+\geometry{a4paper}
+
+%\usepackage[UTF8, heading = false, scheme = plain]{ctex}%格式666
+
+\usepackage[UTF8]{ctex}
+
+%\usepackage{authblk} %添加机构 安装preprint后可用
+
+\usepackage{graphicx} %添加图片
+
+\usepackage{amsthm}
+
+\usepackage{amsmath}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}} % 生产粗体向量，而不是带箭头的向量
+
+\usepackage{amssymb}
+
+\usepackage{booktabs} % excel导出的大表格
+
+\usepackage{hyperref}
+
+%\newtheorem{definition}{Definition} %英文
+
+%\newtheorem{theorem}{Theorem}
+
+\newtheorem{definition}{定义} %中文
+
+\newtheorem{lemma}{引理}
+
+\newtheorem{theorem}{定理}
+
+%\newenvironment{proof}{{\noindent\it 证明}\quad}{\hfill □ \square□\par}
+
+\DeclareMathOperator{\Ima}{Im}%定义新符号
+
+\DeclareMathOperator{\Rank}{rank}%定义求秩算子
+
+\title{计算机视觉的数学基础}
+
+\author{徐金中 \\ Email: \href{mailto:jinzhongxu@xx.ac.cn}{jinzhongxu@xx.ac.cn}}
+
+%\affil{中国科学院} 
+%需要把上面的\usepackage{authblk}取消注释
+
+%date{}
+
+\begin{document}
+
+\maketitle
+
+%\tableofcontents
+
+%\newpage
+
+%\listoffigures
+
+%\newpage
+
+\section{卷积网络和微积分}
+
+%\begin{figure}[ht] %htbp
+
+%\centering
+
+%\includegraphics[scale=0.6]{ai.png}
+
+%\caption{this is a figure demo}
+
+%\label{fig:label}
+
+%\end{figure}
+
+\begin{equation}\label{fft}
+	F(\omega) = \mathcal{F}[f(t)] = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} \mathrm{d}t
+\end{equation}
+
+\section{损失函数和最优化}
+
+\begin{equation*}
+	\theta^{\star} = \underset{\theta \in \Theta}{\arg \min} J(\theta) + \lambda \|\theta\|^2
+\end{equation*} 
+
+\end{document}
