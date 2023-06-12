@@ -147,5 +147,5 @@ public class Main {
 参考文章：
 
 - [java对象结构以及对象大小计算示例](https://blog.csdn.net/jinxinxin1314/article/details/106170881)
-
 - [详解Java对象内存结构以及指针压缩原理](https://betheme.net/houduan/28931.html?action=onClick)
+- [一文聊透 JVM 内存分布、内存对齐、压缩指针！](https://mp.weixin.qq.com/s/_q2P4HGJv7d16PSVxUuy0g#)
