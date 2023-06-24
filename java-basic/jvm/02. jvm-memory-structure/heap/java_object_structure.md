@@ -10,7 +10,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由上图可知对于普通对象，前25bit都是没有用的，使用31bit存储hashcode值，使用4bit存储分代年龄，故`MaxTenuringThreshold`的最大值只能为15，同时使用1bit判断是否是偏向锁，2bit用作锁的标志位。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;锁升级功能主要依赖于MarkWord中的锁标志位和释放偏向锁标志位，Synchronized同步锁就是从偏向锁开始的，随着竞争越来越激烈，偏向锁升级到轻量级锁，最终升级到重量级锁。本文不做具体介绍，详情请看[同步锁升级的过程](../../../juc/locks/synchronized_lock_escalation.md)。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;锁升级功能主要依赖于MarkWord中的锁标志位和释放偏向锁标志位，Synchronized同步锁就是从偏向锁开始的，随着竞争越来越激烈，偏向锁升级到轻量级锁，最终升级到重量级锁。本文不做具体介绍，详情请看[同步锁升级的过程](../../../concurrency/locks/synchronized_lock_escalation.md)。
 
 ### 2. Klass Pointer
 
