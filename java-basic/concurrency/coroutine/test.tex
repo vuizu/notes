@@ -1,34 +1,17 @@
-% \documentclass[UTF8, 12pt]{ctexart}
-
-\documentclass[12pt]{article}
-% \usepackage{xeCJK}
-
-\usepackage{ctex}
-
-\usepackage{listings}
-\usepackage{graphicx}
+\documentclass{template}
 
 % 定理环境需要杂气导言区定义
-\newtheorem{thm}{定理}
-
-\newenvironment{myquote}{\begin{quote}\zihao{5}\kaishu}{\end{quote}}
-
 \newcommand\an{\angle}
 
-\title{杂谈勾股定理}
-\author{王五}
-\date{\today}
+\graphicspath{{../image/}}
+% \linespread{1.2} % 行间距
+% \usepackage{framed}
+\usepackage{enumitem}
 
 \begin{document}
-\maketitle
-% 先标题，再摘要
-\begin{abstract}
-    这是一篇关于勾股定理的小短文。
-\end{abstract}
-\tableofcontents
+\ttfamily
 \section{勾股定理在古代}
-
-范德萨发生发大水发大水分阿斯顿发啊师傅啊是的凤毛麟角看不见啊是会计课默哀世界佛的，
+范德萨发生发大水发水分阿\textsl{斯顿发啊师傅}的凤毛麟角见啊是会计课默哀界佛的，
 % 两个减号将输出与字母n等宽的短线
 见于欧几里德\footnote{公元前330 -- 275年}《几何原本》的命题。
 
@@ -38,19 +21,15 @@
 \end{myquote}
 又载陈子(约公元前 7--6 世纪)答荣方问:
 \begin{quote}
-    若求邪至日者，以日下为勾，日高为股，勾股各自乘，并而开方除之，得邪至日。
+    若求邪至日者，以日下为勾，\underline{日高为股，勾股各自乘}，并而开方除之，得邪至。
     \zihao{5}\kaishu 引用的内容
 \end{quote}
-都较古希腊更早。
+都较古希腊更早
 
-\section{勾股定理的近代形式}
+\section{勾股定理的近形式}
 
 勾股定理可以用现代语言表示如下：
-\begin{thm}[勾股定理]
-    直角三角形斜边的平方和等于两腰的平方和。
-    可以用符号语言表示为。
 
-\end{thm}
 \begin{equation}
     a(b + c) = ab + ac
 \end{equation}
@@ -63,18 +42,53 @@ $\an BCA = \pi / 2$
 
 
 Two major problem are discussed in the paper, which are: 
-\begin{itemize}
-    \item Doing the first thing.
-    \item Doing the second thing.
+\begin{itemize}[
+    leftmargin=8mm, % 整体离左边多少距离
+     itemindent=1cm, % 缩进多少距离
+    ]
+    % \setlength{\parindent}{2em}
+    \item \textit{Doing the first thing. And nothing.And nothing.
+    And nothing.And nothing.And nothing.And nothing.And nothing.}
+    \item \textsl{Doing the second thing.}
+    % \item \textbf{Doing the \emph{third} thing.}
 \end{itemize}
+% \begin{enumerate}[\qquad (a)]
+%     \item first layer
+% \end{enumerate}
 
 
 \section{Nothing to do en...}
+我们定义的图片如下所示\ref{fig:1}：
+% \begin{center}
+% \includegraphics[
+%     angle=-45,
+%     origin=lb,
+%     width=0.9\textwidth]{内存对齐案例}
+% \end{center}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{内存对齐案例}
+    \caption{内存对齐案例}
+    \label{fig:1}
+\end{figure}
 
-
-\begin{lstlisting}[language=Python, name={test.py}]
-    # Python code example
-    for i in range(10):
-        print('Hello World')
+这是我们定义的代码\autoref{code:1}：
+\begin{lstlisting}[
+    language=Java, 
+    firstnumber=100, 
+    linewidth=1.0\linewidth, 
+    caption=code,
+    label=code:1,
+   ]
+    // Java code example
+    public class Main {
+        public static void main(String[] args) throws Exception {
+            // 注释
+            StreamingExecutionEnvironment env = 
+                    StreamingExecutionEnvironment.getExecutionEnvironment();
+            env.execute();
+        }
+    }
 \end{lstlisting}
+
 \end{document}
